@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\ProductController;
+use App\Http\Controllers\api\GeneralController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use App\Http\Controllers\api\ProductController;
 */
 
 Route::apiResource('/produtos', ProductController::class);
+Route::get('/marcas', [GeneralController::class, 'getAllMarcas']);

@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 1,
                             "preco" => 65.00,
                             "estoque" => 50,
-                            "imagens" => "".url("/public/boca-rosa-base.webp"),
+                            "imagens" => "".url("public/boca-rosa-base.webp"),
                             "desconto" => 0,
                         ],
                         [
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 2,
                             "preco" => 27.99,
                             "estoque" => 70,
-                            "imagens" => "".url("/public/rubyrose-base.webp"),
+                            "imagens" => "".url("public/rubyrose-base.webp"),
                             "desconto" => 0,
                         ],
                         [
