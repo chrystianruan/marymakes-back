@@ -18,3 +18,5 @@ use App\Http\Controllers\api\GeneralController;
 
 Route::apiResource('/produtos', ProductController::class);
 Route::get('/marcas', [GeneralController::class, 'getAllMarcas']);
+Route::get('/categorias', [GeneralController::class, 'getAllCategorias']);
+Route::get('/tipos', [GeneralController::class, 'getAllTipos']);
