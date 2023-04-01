@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 2,
                             "preco" => 14,
                             "estoque" => 95,
-                            "imagens" => "".url("/img/max-batom2.webp"),
+                            "imagens" => "".url("/img/max-batom2.png"),
                             "desconto" => 20,
                         ]
                 ];
