@@ -39,8 +39,8 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 1,
                             "preco" => 65.00,
                             "estoque" => 50,
-                            "imagens" => "".url("public/boca-rosa-base.webp"),
-                            "desconto" => 0,
+                            "imagens" => "".url("/img/boca-rosa-base.webp"),
+                            "desconto" => 10,
                         ],
                         [
                             "nome" => "Base Liquida Feels - Hb8053 - Pudim 20 - Rubyrose", 
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 2,
                             "preco" => 27.99,
                             "estoque" => 70,
-                            "imagens" => "".url("public/rubyrose-base.webp"),
+                            "imagens" => "".url("/img/rubyrose-base.webp"),
                             "desconto" => 0,
                         ],
                         [
@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 3,
                             "preco" => 10,
                             "estoque" => 100,
-                            "imagens" => "".url("/public/phalle-batom.png"),
+                            "imagens" => "".url("/img/phalle-batom.png"),
                             "desconto" => 0,
                         ],
                         [
@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 1,
                             "preco" => 15,
                             "estoque" => 20,
-                            "imagens" => "".url("/public/max-batom.webp"),
+                            "imagens" => "".url("/img/max-batom.webp"),
                             "desconto" => 0,
                         ],
                         [
@@ -83,8 +83,8 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 2,
                             "preco" => 52.90,
                             "estoque" => 15,
-                            "imagens" => "".url("/public/boca-corretivo.webp"),
-                            "desconto" => 0,
+                            "imagens" => "".url("/img/boca-corretivo.webp"),
+                            "desconto" => 5,
                         ],
                         [
                             "nome" => "Corretivo Liquido Flawless Collection - Hb8080 - Chocolate 6 - Rubyrose", 
@@ -94,7 +94,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 3,
                             "preco" => 13.6,
                             "estoque" => 120,
-                            "imagens" => "".url("/public/ruby-corretivo.webp"),
+                            "imagens" => "".url("/img/ruby-corretivo.webp"),
                             "desconto" => 0,
                         ],
                         [
@@ -105,7 +105,7 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 1,
                             "preco" => 25,
                             "estoque" => 7,
-                            "imagens" => "".url("/public/phalle-base.jpg"),
+                            "imagens" => "".url("/img/phalle-base.jpg"),
                             "desconto" => 0,
                         ],
                         [
@@ -116,8 +116,8 @@ class DatabaseSeeder extends Seeder
                             "tipo_id" => 2,
                             "preco" => 14,
                             "estoque" => 95,
-                            "imagens" => "".url("/public/max-batom2.webp"),
-                            "desconto" => 0,
+                            "imagens" => "".url("/img/max-batom2.webp"),
+                            "desconto" => 20,
                         ]
                 ];
 
