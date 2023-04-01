@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\GeneralController;
+use App\Http\Controllers\api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::apiResource('/produtos', ProductController::class);
 Route::get('/marcas', [GeneralController::class, 'getAllMarcas']);
 Route::get('/categorias', [GeneralController::class, 'getAllCategorias']);
 Route::get('/tipos', [GeneralController::class, 'getAllTipos']);
+Route::post('/new/user', [UserController::class, 'newUser']);

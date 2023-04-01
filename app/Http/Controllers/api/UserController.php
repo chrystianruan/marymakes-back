@@ -13,7 +13,7 @@ class UserController extends Controller
         $user->nome = $request->nome;
         $user->email = $request->email;
         $user->telefone = $request->telefone;
-        $user->password = $request->password;
+        $user->password = bcrypt($request->password);
         $user->save();
 
         return response()->json([
