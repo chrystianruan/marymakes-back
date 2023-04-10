@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function newUser(Request $request) {
         $user = new User;
-        $user->nome = $request->nome;
+        $user->name = $request->nome;
         $user->email = $request->email;
         $user->telefone = $request->telefone;
         $user->password = bcrypt($request->password);
