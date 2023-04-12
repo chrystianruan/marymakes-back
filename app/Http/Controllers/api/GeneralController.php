@@ -30,8 +30,7 @@ class GeneralController extends Controller
     }
 
     public function testUserAuth(Request $request) {
-
-        $carrinho = Carrinho::where('user_id', '=', $request->user())->get();
+        $carrinho = Carrinho::where('user_id', '=', $request->user()->id())->get();
         $user = $request->user();
         if ($carrinho->count() > 0) {
             return $carrinho;
