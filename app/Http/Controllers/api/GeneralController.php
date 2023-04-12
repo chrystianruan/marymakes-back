@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Marca;
 use App\Models\Tipo;
 use App\Models\Categoria;
+use App\Models\Carrinho;
 
 class GeneralController extends Controller
 {
@@ -26,5 +27,20 @@ class GeneralController extends Controller
         $categorias = Categoria::select('id', 'nome_categoria')->get();
         
         return $categorias;
+    }
+
+    public function testUserAuth(Request $request) {
+
+        $carrinho = Carrinho::where('user_id', '=', $request->user())->get();
+        $user = $request->user();
+        if ($carrinho->count() > 0) {
+            return $carrinho;
+        } else { 
+            return response()->json([
+                "response" => "".$user->name
+            ]);
+        }
+
+
     }
 }
