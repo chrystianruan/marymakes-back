@@ -24,4 +24,4 @@ Route::get('/categorias', [GeneralController::class, 'getAllCategorias']);
 Route::get('/tipos', [GeneralController::class, 'getAllTipos']);
 Route::post('/new/user', [UserController::class, 'newUser']);
 Route::post('/login/auth', [LoginController::class, 'authentication']);
-Route::middleware('auth:sanctum')->get('/teste', GeneralController::class, 'testUserAuth');
+Route::middleware('auth:sanctum')->get('/teste', [GeneralController::class, 'testUserAuth']);
