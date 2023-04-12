@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function authentication(Request $request) {
-        if(Auth::attempt(['email' => $email, 'password' => $password])) {
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return response()->json([
                 "response" => "Acesso autorizado"
             ], 200);
