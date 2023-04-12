@@ -17,7 +17,7 @@
 
             <div>
                 <label>Senha</label>
-                <input type="password">
+                <input type="password" name="password">
             </div>
 
             <div>
