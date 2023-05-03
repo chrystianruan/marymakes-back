@@ -5,16 +5,12 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
-    public function authentication(Request $request) {
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            $user = Auth::user();
-            $token = $user->createToken('JWT');
-            return response()->json($token->plainTextToken, 200);
-        } else {
-            return abort(403);
-        }
+    public function logout(Request $request) {
+        $request->user()->tokens()->delete();
+        return ['message' => 'All user tokens were revoked!'];
     }
 }

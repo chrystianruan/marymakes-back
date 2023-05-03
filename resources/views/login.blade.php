@@ -7,7 +7,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="https://marymakes-back-production.up.railway.app/api/login/auth" method="POST">
+    <form action="/api/login/auth" method="POST">
         @csrf
         <div style="display: flex; flex-wrap: wrap; flex-direction: column">
             <div>

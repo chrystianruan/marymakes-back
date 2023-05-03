@@ -6,6 +6,7 @@ use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\GeneralController;
 use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\api\LoginController;
+use App\Http\Controllers\api\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,14 @@ use App\Http\Controllers\api\LoginController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 Route::apiResource('/produtos', ProductController::class);
 Route::get('/marcas', [GeneralController::class, 'getAllMarcas']);
 Route::get('/categorias', [GeneralController::class, 'getAllCategorias']);
 Route::get('/tipos', [GeneralController::class, 'getAllTipos']);
 Route::post('/new/user', [UserController::class, 'newUser']);
-Route::post('/login/auth', [LoginController::class, 'authentication']);
-Route::middleware('auth:sanctum')->get('/teste', [GeneralController::class, 'testUserAuth']);
+Route::post('/login/auth', [AuthController::class, 'authentication']);
+Route::get('/teste', [GeneralController::class, 'testUserAuth']);
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});

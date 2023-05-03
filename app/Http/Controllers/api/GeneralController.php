@@ -4,6 +4,8 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Marca;
 use App\Models\Tipo;
 use App\Models\Categoria;
@@ -30,16 +32,7 @@ class GeneralController extends Controller
     }
 
     public function testUserAuth(Request $request) {
-        $carrinho = Carrinho::where('user_id', '=', $request->user()->id)->get();
-        $user = $request->user();
-        if ($carrinho->count() > 0) {
-            return $carrinho;
-        } else { 
-            return response()->json([
-                "response" => "".$user->name
-            ]);
-        }
-
+        return Carrinho::where('user_id', '=', auth()->user()->id)->get();
 
     }
 }

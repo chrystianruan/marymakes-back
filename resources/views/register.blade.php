@@ -7,7 +7,7 @@
     <title>Register</title>
 </head>
 <body>
-    <form action="https://marymakes-back-production.up.railway.app/api/new/user" method="POST">
+    <form action="/api/new/user" method="POST">
         @csrf
         <div style="display: flex; flex-wrap: wrap; flex-direction: column">
             <div>
