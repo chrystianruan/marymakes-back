@@ -31,8 +31,4 @@ class GeneralController extends Controller
         return $categorias;
     }
 
-    public function testUserAuth(Request $request) {
-        return Carrinho::where('user_id', '=', auth()->user()->id)->get();
-
-    }
 }

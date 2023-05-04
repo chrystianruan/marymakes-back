@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\GeneralController;
 use App\Http\Controllers\api\UserController;
+use App\Http\Controllers\api\CartController;
 use App\Http\Controllers\api\LoginController;
 use App\Http\Controllers\api\AuthController;
 
@@ -23,9 +24,12 @@ Route::get('/marcas', [GeneralController::class, 'getAllMarcas']);
 Route::get('/categorias', [GeneralController::class, 'getAllCategorias']);
 Route::get('/tipos', [GeneralController::class, 'getAllTipos']);
 Route::post('/new/user', [UserController::class, 'newUser']);
+
 Route::post('/login/auth', [AuthController::class, 'authentication']);
 Route::get('/teste', [GeneralController::class, 'testUserAuth']);
 Route::get('/logout', [LoginController::class, 'logout']);
+Route::middleware('auth:sanctum')->get('/user/carrinho', [CartController::class, 'getAllProductsOnCart']);
+Route::middleware('auth:sanctum')->post('/new/cart', [CartController::class, 'insertProductOnCart']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
